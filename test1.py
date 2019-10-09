@@ -56,7 +56,7 @@ Role=input('|---------{Mori Stat Card}---------|\n'
       '| Religion=-2  | Sleight of Hand=1 |\n'
       '| Stealth=1    | Survival=2        |\n'
       '|----------------------------------|\n'
-    'What stat are you going rolling?\n1.)Ability Check\n2.)Attack Role\n3.)Deathsaving Throw.\n(Enter answer as associated number.)');
+    'What stat are you going rolling?\n1.)Ability Check\n2.)Attack Role\n3.)Dice Roller\n(Enter answer as associated number.)');
 if Role == '1':
                Role_Type=input('What stat are you rolling?(Please enter associated number)\n1.) Acrobatics\n2.) Animal Handling\n3.) Arcana\n4.) Athletics\n5.) Deception\n6.) History\n7.) Insight\n8.) Intimidation\n9.) Investigation\n10.) Medicine\n'
       '11.) Nature\n12.) Perception\n13.) Performance\n14.) Persuasion\n15.) Religion\n16.) Sleight of Hand\n17.) Stealth\n18.) Survival\n Selection:');
@@ -180,11 +180,37 @@ elif Role == '2':
                 y=(random.randint(1,6))
                 a=y+3
                 print("You dealt",a,"Slashing Damage.")
-    else:
-        Weapon_Type=input('Is it a finesse weapon?\n1.) Yes\n2.) No\nSelection:')
+  else:
+      Weapon_Type=input('Is it a finesse weapon?\n1.) Yes\n2.) No\nSelection:')
         if Weapon_Type=='1':
                 Weapon_Type2=input('What damage dice is being used?\n1.) D4\n2.) D6\n3.) D8\n4.) D10\n5.) D12\n Selection:')
                 if Weapon_Type2== '1':
                     for x in range(1):
                         y=(random.randint(1, 4))
                         z= Dexterity + y
+                        print("You dealt",z,"Damage.")
+                elif Weapon_Type2== '2':
+                    for x in range(1):
+                        y=(random.randint(1, 6))
+                        z= Dexterity + y
+                        print("You dealt",z,"Damage.")
+                elif Weapon_Type2== '3':
+                     for x in range(1):
+                        y=(random.randint(1, 8))
+                        z= Dexterity + y
+                        print("You dealt",z,"Damage.")
+                elif Weapon_Type2== '4':
+                     for x in range(1):
+                        y=(random.randint(1, 10))
+                        z= Dexterity + y
+                        print("You dealt",z,"Damage.")
+                else:
+                     for x in range(1):
+                        y=(random.randint(1, 12))
+                        z= Dexterity + y
+                        print("You dealt",z,"Damage.")
+elif Role == '3':
+      Basic_Role=input('How many sides does the dice being rolled have?')
+            for x in range(1)
+            y=(random.randinint(1, Basic_Role))
+            print("You Rolled a" Basic_Role")
